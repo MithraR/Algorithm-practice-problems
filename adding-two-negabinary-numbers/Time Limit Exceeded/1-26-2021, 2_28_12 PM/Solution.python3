@@ -1,0 +1,30 @@
+// https://leetcode.com/problems/adding-two-negabinary-numbers
+
+class Solution:
+    def addNegabinary(self, arr1: List[int], arr2: List[int]) -> List[int]:
+        def convert(self, arr):
+            if(len(arr) == 1 and arr[0]==0):
+                return 0
+            op = 0
+            n = len(arr) - 1
+            for i in arr:
+                if i == 1:
+                    op += pow(-2,n)
+                    n -= 1
+                else:
+                    n -= 1
+            return (op)
+        
+        res =  convert(self,arr1)+convert(self,arr2)
+        out = []
+        if res==0:
+            return [0]
+        while(res!=0):
+            out.append(res%2)
+            res = res//2
+        out.reverse()
+        return (out)
+        
+                    
+                    
+        

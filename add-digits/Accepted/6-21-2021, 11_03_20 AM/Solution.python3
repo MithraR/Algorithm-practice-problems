@@ -1,0 +1,28 @@
+// https://leetcode.com/problems/add-digits
+
+class Solution:
+    def addDigits(self, n: int) -> int:
+        if 0<=n<=9:
+            return n
+        if (n-10)%9 == 0:
+            return 1
+        elif (n-11)%9 == 0:
+            return 2
+        elif (n-12)%9 == 0:
+            return 3
+        elif (n-13)%9 == 0:
+            return 4
+        elif (n-14)%9 == 0:
+            return 5
+        elif (n-15)%9 == 0:
+            return 6
+        elif (n-16)%9 == 0:
+            return 7
+        elif (n-17)%9 == 0:
+            return 8
+        elif (n-18)%9 == 0:
+            return 9
+        else:
+            pass
+                
+                

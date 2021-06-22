@@ -1,0 +1,28 @@
+// https://leetcode.com/problems/advantage-shuffle
+
+class Solution:
+    def advantageCount(self, A: List[int], B: List[int]) -> List[int]:
+        i = 0
+        j = 0
+        k = 0
+        sz = len(A)
+        op = []
+        while i<sz:
+            if A[i]>B[j]:
+                op.append(A[i])
+                # print (op)
+                # print ("if")
+            else:
+                temp = A[i]
+                k = i+1
+                while A[k]<B[j] and k<sz:
+                    k = k+1
+                A[i] = A[k]
+                A[k] = temp
+                op.append(A[i])
+                # print("else")
+            i+=1
+            j+=1
+        return op
+                            
+        

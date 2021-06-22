@@ -1,0 +1,12 @@
+// https://leetcode.com/problems/add-digits
+
+class Solution:
+    def addDigits(self, n: int) -> int:
+        while n>9:
+            temp = n
+            s = 0
+            while temp>0:
+                s = s+(temp%10)
+                temp = temp//10
+            n = s
+        return n
