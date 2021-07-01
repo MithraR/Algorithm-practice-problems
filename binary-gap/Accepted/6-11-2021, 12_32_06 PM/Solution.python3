@@ -1,0 +1,16 @@
+// https://leetcode.com/problems/binary-gap
+
+class Solution:
+    def binaryGap(self, n: int) -> int:
+        n = str(bin(n))[2::]
+        li = []
+        for i in range(0,len(n)):
+            if n[i] == '1':
+                li.append(i)
+        m = 0
+        for i in range(1,len(li)):
+            m = max(m,abs(li[i]-li[i-1]))
+        return m
+            
+            
+        

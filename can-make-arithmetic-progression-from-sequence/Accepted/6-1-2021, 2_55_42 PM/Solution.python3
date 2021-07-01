@@ -1,0 +1,26 @@
+// https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence
+
+class Solution:
+    def canMakeArithmeticProgression(self, arr: List[int]) -> bool:
+        mi = min(arr)
+        ma = max(arr)
+        diff = (ma-mi)/(len(arr)-1)
+        # print(diff)
+        # print(mi,ma)
+        d = {}
+        for i in arr:
+            d[i] = 0
+        d[mi] = 1
+        for _ in range(len(arr)-1):
+            mi += diff
+            if mi in d:
+                # print("Enter",mi)
+                continue
+            else:
+                # print(d)
+                return False
+        # print (d)
+        return True
+            
+            
+        
