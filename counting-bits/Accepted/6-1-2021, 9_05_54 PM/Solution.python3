@@ -1,0 +1,17 @@
+// https://leetcode.com/problems/counting-bits
+
+class Solution:
+    def countBits(self, n: int) -> List[int]:
+        out = []
+        for i in range(n+1):
+            a = i
+            temp = []
+            while a!=0:
+                temp.append(a%2)
+                a = a//2
+            out.append(temp.count(1))
+        return out
+                
+            
+            
+        

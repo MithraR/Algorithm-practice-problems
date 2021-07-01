@@ -1,0 +1,19 @@
+// https://leetcode.com/problems/count-items-matching-a-rule
+
+class Solution:
+    def countMatches(self, items: List[List[str]], rk: str, rv: str) -> int:
+        ct = 0
+        if rk == "type":
+            r = 0
+        elif rk == "color":
+            r = 1
+        else:
+            r = 2
+        for i in items:
+            if i[r] == rv:
+                ct += 1
+        return ct
+            
+            
+            
+        

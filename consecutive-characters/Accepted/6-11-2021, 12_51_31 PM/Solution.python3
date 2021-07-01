@@ -1,0 +1,22 @@
+// https://leetcode.com/problems/consecutive-characters
+
+class Solution:
+    def maxPower(self, s: str) -> int:
+        grp = []
+        i = 1
+        ct = 0
+        if len(s) == 0 or len(s) == 1: return 1
+        while i<len(s):
+            while i<len(s) and s[i] == s[i-1]:
+                ct += 1
+                i += 1
+            grp.append(ct+1)
+            ct = 0
+            i += 1
+        return max(grp)
+            
+                
+            
+            
+        
+        

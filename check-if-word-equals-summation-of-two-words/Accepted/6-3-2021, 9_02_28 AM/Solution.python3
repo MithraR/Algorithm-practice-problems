@@ -1,0 +1,16 @@
+// https://leetcode.com/problems/check-if-word-equals-summation-of-two-words
+
+class Solution:
+    def isSumEqual(self, f: str, s: str, t: str) -> bool:
+        d = {'a':'0','b':'1','c':'2','d':'3','e':'4','f':'5','g':'6','h':'7','i':'8','j':'9'}
+        fn,sn,tn = '','',''
+        for i in f:
+            fn+=(d[i])
+        for i in s:
+            sn+=(d[i])
+        for i in t:
+            tn+=d[i]
+        return int(fn)+int(sn)==int(tn)
+            
+        
+        
